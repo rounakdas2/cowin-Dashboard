@@ -50,8 +50,7 @@ class CowinDashboard extends Component {
         })),
         vaccinationByGender: fetchedData.vaccination_by_gender.map(
           genderType => ({
-            gender: genderType,
-            gender,
+            gender: genderType.gender,
             count: genderType.count,
           }),
         ),
@@ -87,7 +86,7 @@ class CowinDashboard extends Component {
         <VaccinationByGender
           vaccinationByGenderDetails={vaccinationData.vaccinationByGender}
         />
-        <vaccinationByAge
+        <VaccinationByAge
           vaccinationByAgeDetails={vaccinationData.vaccinationByAge}
         />
       </>
